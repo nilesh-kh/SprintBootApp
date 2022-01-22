@@ -3,7 +3,7 @@ pipeline{
         label "aws_kishor"
     }
     tools{
-        maven 'mavenhome' 
+        maven 'Maven' 
     }
     stages{
         stage("Test"){
@@ -25,7 +25,7 @@ pipeline{
         }
         stage("Deploy"){
             steps{
-                deploy adapters: [tomcat9(credentialsId: '48cad2b3-6227-489d-83a4-e3508346fbc3', path: '', url: 'http://18.221.95.100:8080')], contextPath: 'tomcatproject', war: '**/*.war'
+                deploy adapters: [tomcat9(credentialsId: '2f37f574-c632-4fd2-96bf-1e17f0f083f5', path: '', url: 'http://54.152.32.154:8080')], contextPath: 'tomcatproject', war: '**/*.war'
             }  
         }
     }
